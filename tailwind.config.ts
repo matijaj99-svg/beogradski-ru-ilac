@@ -47,6 +47,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        matte: "hsl(var(--matte))",
+        steel: "hsl(var(--steel))",
+        scratched: "hsl(var(--scratched))",
+        safety: "hsl(var(--safety))",
+        chalk: "hsl(var(--chalk))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -57,6 +62,10 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      fontFamily: {
+        tactical: ['"Chakra Petch"', "sans-serif"],
+        base: ['Manrope', "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
