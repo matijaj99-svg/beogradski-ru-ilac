@@ -191,9 +191,6 @@ const Index = () => {
             </div>
           ))}
         </div>
-        <p className="text-chalk/50 text-sm mt-6 font-tactical uppercase tracking-widest">
-          // Zameni placeholdere svojim fotografijama
-        </p>
       </section>
 
       <section id="kontakt" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched">
