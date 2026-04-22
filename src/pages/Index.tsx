@@ -79,7 +79,7 @@ const Index = () => {
           </div>
 
           <h1 className="font-tactical text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold uppercase leading-[0.9] mb-6 text-chalk">
-            Od početka rušenja do čistog stana za 72h.
+            Od početka rušenja do čistog stana za 72 sata
           </h1>
 
           <p className="font-tactical text-xl md:text-2xl lg:text-3xl text-chalk/80 uppercase tracking-wider mb-10 font-bold">
