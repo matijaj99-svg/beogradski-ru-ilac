@@ -1,4 +1,17 @@
 import heroWorker from "@/assets/hero-worker.jpg";
+import gallery1 from "@/assets/gallery-1.jpeg";
+import gallery2 from "@/assets/gallery-2.jpeg";
+import gallery3 from "@/assets/gallery-3.jpeg";
+import gallery4 from "@/assets/gallery-4.jpeg";
+import gallery5 from "@/assets/gallery-5.jpeg";
+
+const gallery = [
+  { src: gallery1, alt: "Šut i otpadni materijal pripremljen za iznošenje" },
+  { src: gallery2, alt: "Rušenje podova i pregradnih elemenata" },
+  { src: gallery3, alt: "Kontejner sa drvenim otpadom" },
+  { src: gallery4, alt: "Očišćen prostor spreman za predaju" },
+  { src: gallery5, alt: "Rušenje u podrumskim prostorijama" },
+];
 
 const PHONE = "+381 60 123 4567";
 const PHONE_HREF = "tel:+381601234567";
