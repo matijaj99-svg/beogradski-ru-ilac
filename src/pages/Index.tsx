@@ -217,10 +217,6 @@ const Index = () => {
             <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Pokrivamo</span>
             <span className="text-chalk/80">Ceo Beograd</span>
           </div>
-          <div className="flex items-baseline gap-4">
-            <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Radno</span>
-            <span className="text-chalk/80">Pon–Ned · 0–24h</span>
-          </div>
         </div>
       </section>
 
