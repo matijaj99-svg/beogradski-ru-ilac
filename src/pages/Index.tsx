@@ -20,7 +20,7 @@ const PHONE_HREF = "tel:+381631806752";
 
 const services = [
   { n: "01", title: "Rušenje stanova", desc: "Pregradni zidovi, keramika, parket, sanitarije." },
-  { n: "02", title: "Iznošenje šuta", desc: "Vreće, kontejneri, kombiji. Ovlašćena deponija." },
+  { n: "02", title: "Iznošenje šuta", desc: "Vreće, kontejneri, kombi prevoz šuta. Ovlašćena deponija." },
   { n: "03", title: "Završno čišćenje", desc: "Grubo i fino čišćenje. Spremno za useljenje." },
 ];
 
