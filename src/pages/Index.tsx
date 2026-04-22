@@ -1,3 +1,5 @@
+import heroWorker from "@/assets/hero-worker.jpg";
+
 const PHONE = "+381 60 123 4567";
 const PHONE_HREF = "tel:+381601234567";
 
