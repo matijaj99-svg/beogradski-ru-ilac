@@ -15,8 +15,8 @@ const gallery = [
   { src: gallery6, alt: "Sortirane cigle pripremljene za odvoz" },
 ];
 
-const PHONE = "+381 60 123 4567";
-const PHONE_HREF = "tel:+381601234567";
+const PHONE = "+381 63 1806752";
+const PHONE_HREF = "tel:+381631806752";
 
 const services = [
   { n: "01", title: "Rušenje stanova", desc: "Pregradni zidovi, keramika, parket, sanitarije." },
