@@ -1,6 +1,7 @@
 {
   "name": "vite_react_shadcn_ts",
   "private": true,
+  "homepage": "https://matijaj99-svg.github.io/beogradski-ru-ilac",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
