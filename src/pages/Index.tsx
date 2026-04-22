@@ -1,3 +1,5 @@
+import heroWorker from "@/assets/hero-worker.jpg";
+
 const PHONE = "+381 60 123 4567";
 const PHONE_HREF = "tel:+381601234567";
 
@@ -49,6 +51,14 @@ const Index = () => {
 
       {/* Hero */}
       <header className="px-4 md:px-12 py-20 md:py-32 border-b border-scratched relative overflow-hidden">
+        <img
+          src={heroWorker}
+          alt="Radnik ruši zid u stanu — Rušenje BG Beograd"
+          width={1600}
+          height={1024}
+          className="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-matte via-matte/80 to-matte/40 pointer-events-none" />
         <div className="absolute inset-0 hazard-stripes opacity-10 pointer-events-none" />
         <div className="relative">
           <div className="mb-6 flex items-center gap-4">
