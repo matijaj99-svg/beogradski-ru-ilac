@@ -196,37 +196,6 @@ const Index = () => {
         </p>
       </section>
 
-      <section id="cene" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched">
-        <div className="flex items-center gap-4 mb-4">
-          <div className="size-2 bg-safety" />
-          <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
-            Cene
-          </span>
-        </div>
-        <h2 className="font-tactical text-4xl md:text-6xl font-bold uppercase text-chalk leading-[0.9] mb-12 max-w-3xl">
-          Fiksna cena. Bez iznenađenja.
-        </h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-scratched border border-scratched">
-          {[
-            { t: "Rušenje pregradnog zida", p: "od 1.500 RSD/m²" },
-            { t: "Skidanje keramike", p: "od 600 RSD/m²" },
-            { t: "Iznošenje šuta (vreća)", p: "od 350 RSD/kom" },
-            { t: "Kontejner 5m³", p: "od 18.000 RSD" },
-            { t: "Kompletan stan 50m²", p: "od 65.000 RSD" },
-            { t: "Završno čišćenje", p: "od 350 RSD/m²" },
-          ].map((row) => (
-            <div key={row.t} className="bg-matte p-6 flex flex-col gap-2">
-              <div className="text-chalk/60 text-xs font-tactical uppercase tracking-widest">
-                {row.t}
-              </div>
-              <div className="font-tactical text-2xl text-chalk font-bold">{row.p}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Contact */}
       <section id="kontakt" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched">
         <div className="flex items-center gap-4 mb-4">
           <div className="size-2 bg-safety" />
