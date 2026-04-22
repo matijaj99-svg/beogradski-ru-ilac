@@ -44,7 +44,7 @@ const Index = () => {
       <nav className="flex justify-between items-center px-4 md:px-12 py-5 border-b border-scratched bg-matte sticky top-0 z-40">
         <a href="#" className="flex flex-col">
           <span className="font-tactical text-xl md:text-2xl font-bold uppercase tracking-widest leading-none text-chalk">
-            Rušenje BG
+            Apex Rušenje
           </span>
           <span className="font-tactical text-[10px] text-safety tracking-[0.3em] uppercase mt-1">
             Rušenje · Šut · Čišćenje
@@ -69,7 +69,7 @@ const Index = () => {
       <header className="px-4 md:px-12 py-20 md:py-32 border-b border-scratched relative overflow-hidden">
         <img
           src={heroWorker}
-          alt="Radnik ruši zid u stanu — Rušenje BG Beograd"
+          alt="Radnik ruši zid u stanu — Apex Rušenje Beograd"
           width={1600}
           height={1024}
           className="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none"
@@ -211,7 +211,7 @@ const Index = () => {
           </a>
           <div className="flex items-baseline gap-4">
             <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Email</span>
-            <span className="font-tactical text-lg md:text-xl text-chalk">info@rusenje-bg.rs</span>
+            <span className="font-tactical text-lg md:text-xl text-chalk">info@apex-rusenje.rs</span>
           </div>
           <div className="flex items-baseline gap-4">
             <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Pokrivamo</span>
@@ -223,13 +223,13 @@ const Index = () => {
       {/* Footer */}
       <footer className="px-4 md:px-12 py-10 flex flex-col md:flex-row gap-6 justify-between items-start md:items-center">
         <div>
-          <div className="font-tactical text-xl font-bold uppercase tracking-widest text-chalk">Rušenje BG</div>
+          <div className="font-tactical text-xl font-bold uppercase tracking-widest text-chalk">Apex Rušenje</div>
           <div className="font-tactical text-[10px] text-safety tracking-[0.3em] uppercase mt-1">
             Rušenje · Šut · Čišćenje
           </div>
         </div>
         <div className="text-chalk/40 text-xs font-tactical uppercase tracking-widest">
-          © {new Date().getFullYear()} Rušenje BG · Beograd
+          © {new Date().getFullYear()} Apex Rušenje · Beograd
         </div>
       </footer>
 
