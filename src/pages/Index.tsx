@@ -78,14 +78,12 @@ const Index = () => {
             </span>
           </div>
 
-          <h1 className="font-tactical text-5xl sm:text-6xl md:text-7xl lg:text-[7rem] font-bold uppercase leading-[0.85] mb-8 text-chalk">
-            Rušimo.<br />
-            Iznosimo.<br />
-            <span className="text-stroke-chalk">Čistimo.</span>
+          <h1 className="font-tactical text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold uppercase leading-[0.9] mb-6 text-chalk">
+            Od početka rušenja do čistog stana za 72h.
           </h1>
 
-          <p className="text-base md:text-lg text-chalk/70 max-w-[45ch] mb-10 font-medium">
-            Jedna ekipa, fiksna cena, bez kašnjenja.
+          <p className="font-tactical text-xl md:text-2xl lg:text-3xl text-chalk/80 uppercase tracking-wider mb-10 font-bold">
+            Rušimo. Iznosimo. <span className="text-stroke-chalk">Čistimo.</span>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 max-w-xl">
@@ -141,7 +139,7 @@ const Index = () => {
           </span>
         </div>
         <h2 className="font-tactical text-4xl md:text-6xl font-bold uppercase text-chalk mb-12 max-w-3xl leading-[0.9]">
-          Od poziva do čistog stana — 24–72h.
+          Četiri koraka. Jasan plan.
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-scratched border border-scratched">
