@@ -27,7 +27,7 @@ const services = [
 const steps = [
   { n: "01", t: "Poziv", d: "Opišete prostor i obim radova." },
   { n: "02", t: "Procena", d: "Izlazak na teren — fiksna ponuda." },
-  { n: "03", t: "Rušenje", d: "Ekipa, alat, zaštita, šut isti dan." },
+  { n: "03", t: "Rušenje", d: "Ekipa, alat, zaštita." },
   { n: "04", t: "Predaja", d: "Čisto, fotografije, garancija." },
 ];
 
