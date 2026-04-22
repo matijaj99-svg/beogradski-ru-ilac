@@ -172,14 +172,19 @@ const Index = () => {
         </h2>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-scratched border border-scratched">
-          {Array.from({ length: 6 }).map((_, i) => (
+          {gallery.map((img, i) => (
             <div
               key={i}
-              className="bg-steel/40 aspect-square flex items-center justify-center hazard-stripes relative group overflow-hidden"
+              className="bg-steel/40 aspect-square relative group overflow-hidden"
             >
-              <div className="absolute inset-0 bg-matte/60" />
-              <div className="relative font-tactical text-safety text-xs font-bold tracking-[0.3em] uppercase">
-                {String(i + 1).padStart(2, "0")} // Slika
+              <img
+                src={img.src}
+                alt={img.alt}
+                loading="lazy"
+                className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+              />
+              <div className="absolute top-3 left-3 font-tactical text-safety text-[10px] font-bold tracking-[0.3em] uppercase bg-matte/80 px-2 py-1">
+                {String(i + 1).padStart(2, "0")}
               </div>
             </div>
           ))}
