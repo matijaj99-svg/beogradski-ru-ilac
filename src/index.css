@@ -6,55 +6,54 @@
 
 @layer base {
   :root {
-    --background: 0 0% 4%;
-    --foreground: 0 0% 90%;
+    --background: 0 0% 98%;
+    --foreground: 0 0% 10%;
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 90%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 90%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
 
     --primary: 18 100% 50%;
-    --primary-foreground: 0 0% 4%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 90%;
+    --secondary: 0 0% 94%;
+    --secondary-foreground: 0 0% 10%;
 
-    --muted: 0 0% 10%;
-    --muted-foreground: 0 0% 55%;
+    --muted: 0 0% 92%;
+    --muted-foreground: 0 0% 40%;
 
     --accent: 18 100% 50%;
-    --accent-foreground: 0 0% 4%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
     --ring: 18 100% 50%;
 
     --radius: 0.125rem;
 
-    /* Tactical tokens */
-    --matte: 0 0% 4%;
-    --steel: 0 0% 10%;
-    --scratched: 0 0% 15%;
+    /* Tactical tokens — light mode */
+    --matte: 0 0% 98%;
+    --steel: 0 0% 92%;
+    --scratched: 0 0% 85%;
     --safety: 18 100% 50%;
-    --chalk: 0 0% 90%;
+    --chalk: 0 0% 10%;
 
-    --sidebar-background: 0 0% 4%;
-    --sidebar-foreground: 0 0% 90%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 10%;
     --sidebar-primary: 18 100% 50%;
-    --sidebar-primary-foreground: 0 0% 4%;
-    --sidebar-accent: 0 0% 10%;
-    --sidebar-accent-foreground: 0 0% 90%;
-    --sidebar-border: 0 0% 15%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 92%;
+    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-border: 0 0% 85%;
     --sidebar-ring: 18 100% 50%;
   }
 
   .dark {
-    /* Same — site is dark by default */
     --background: 0 0% 4%;
     --foreground: 0 0% 90%;
   }
