@@ -183,81 +183,33 @@ const Index = () => {
 
       {/* Contact */}
       <section id="kontakt" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-          <div>
-            <div className="flex items-center gap-4 mb-4">
-              <div className="size-2 bg-safety" />
-              <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
-                Kontakt
-              </span>
-            </div>
-            <h2 className="font-tactical text-4xl md:text-6xl font-bold uppercase text-chalk leading-[0.9] mb-8">
-              Zovi. Izlazimo danas.
-            </h2>
+        <div className="flex items-center gap-4 mb-4">
+          <div className="size-2 bg-safety" />
+          <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
+            Kontakt
+          </span>
+        </div>
+        <h2 className="font-tactical text-4xl md:text-6xl font-bold uppercase text-chalk leading-[0.9] mb-8">
+          Zovi. Izlazimo danas.
+        </h2>
 
-            <div className="space-y-6">
-              <a href={PHONE_HREF} className="flex items-baseline gap-4 group">
-                <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Telefon</span>
-                <span className="font-tactical text-2xl md:text-3xl text-chalk group-hover:text-safety">{PHONE}</span>
-              </a>
-              <div className="flex items-baseline gap-4">
-                <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Email</span>
-                <span className="font-tactical text-lg md:text-xl text-chalk">info@rusenje-bg.rs</span>
-              </div>
-              <div className="flex items-baseline gap-4">
-                <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Pokrivamo</span>
-                <span className="text-chalk/80">Ceo Beograd</span>
-              </div>
-              <div className="flex items-baseline gap-4">
-                <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Radno</span>
-                <span className="text-chalk/80">Pon–Ned · 0–24h</span>
-              </div>
-            </div>
+        <div className="space-y-6">
+          <a href={PHONE_HREF} className="flex items-baseline gap-4 group">
+            <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Telefon</span>
+            <span className="font-tactical text-2xl md:text-3xl text-chalk group-hover:text-safety">{PHONE}</span>
+          </a>
+          <div className="flex items-baseline gap-4">
+            <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Email</span>
+            <span className="font-tactical text-lg md:text-xl text-chalk">info@rusenje-bg.rs</span>
           </div>
-
-          <form
-            onSubmit={submit}
-            className="bg-steel/50 border border-scratched p-6 md:p-10 flex flex-col gap-5"
-          >
-            <h3 className="font-tactical text-2xl uppercase font-bold text-chalk mb-2">
-              Zatraži ponudu
-            </h3>
-            {[
-              { k: "name", l: "Ime i prezime", t: "text", req: true },
-              { k: "phone", l: "Telefon", t: "tel", req: true },
-              { k: "address", l: "Adresa objekta", t: "text" },
-            ].map((f) => (
-              <label key={f.k} className="flex flex-col gap-2">
-                <span className="font-tactical text-xs uppercase tracking-[0.2em] text-chalk/60">
-                  {f.l} {f.req && <span className="text-safety">*</span>}
-                </span>
-                <input
-                  type={f.t}
-                  required={f.req}
-                  value={form[f.k as keyof typeof form]}
-                  onChange={(e) => setForm({ ...form, [f.k]: e.target.value })}
-                  className="bg-matte border-2 border-scratched focus:border-safety outline-none px-4 py-3 text-chalk transition-colors"
-                />
-              </label>
-            ))}
-            <label className="flex flex-col gap-2">
-              <span className="font-tactical text-xs uppercase tracking-[0.2em] text-chalk/60">
-                Opis radova
-              </span>
-              <textarea
-                rows={4}
-                value={form.message}
-                onChange={(e) => setForm({ ...form, message: e.target.value })}
-                className="bg-matte border-2 border-scratched focus:border-safety outline-none px-4 py-3 text-chalk transition-colors resize-none"
-              />
-            </label>
-            <button
-              type="submit"
-              className="bg-safety text-matte font-tactical uppercase font-bold text-lg px-8 py-5 border-2 border-safety hover:bg-chalk hover:border-chalk tracking-wider transition-colors mt-2"
-            >
-              Pošalji upit
-            </button>
-          </form>
+          <div className="flex items-baseline gap-4">
+            <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Pokrivamo</span>
+            <span className="text-chalk/80">Ceo Beograd</span>
+          </div>
+          <div className="flex items-baseline gap-4">
+            <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Radno</span>
+            <span className="text-chalk/80">Pon–Ned · 0–24h</span>
+          </div>
         </div>
       </section>
 
