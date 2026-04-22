@@ -1,6 +1,3 @@
-import { useState } from "react";
-import { toast } from "sonner";
-
 const PHONE = "+381 60 123 4567";
 const PHONE_HREF = "tel:+381601234567";
 
@@ -18,18 +15,6 @@ const steps = [
 ];
 
 const Index = () => {
-  const [form, setForm] = useState({ name: "", phone: "", address: "", message: "" });
-
-  const submit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!form.name || !form.phone) {
-      toast.error("Unesite ime i broj telefona.");
-      return;
-    }
-    toast.success("Upit primljen. Zovemo Vas u roku od 30 minuta.");
-    setForm({ name: "", phone: "", address: "", message: "" });
-  };
-
   return (
     <div className="min-h-screen bg-matte text-chalk font-base selection:bg-safety selection:text-matte">
       {/* Status bar */}
