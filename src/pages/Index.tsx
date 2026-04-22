@@ -38,6 +38,7 @@ const Index = () => {
         <div className="hidden lg:flex gap-10 font-tactical text-sm tracking-widest uppercase text-chalk/60">
           <a href="#usluge" className="hover:text-safety">Usluge</a>
           <a href="#proces" className="hover:text-safety">Proces</a>
+          <a href="#galerija" className="hover:text-safety">Galerija</a>
           <a href="#cene" className="hover:text-safety">Cene</a>
           <a href="#kontakt" className="hover:text-safety">Kontakt</a>
         </div>
@@ -145,7 +146,36 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Pricing */}
+      {/* Gallery */}
+      <section id="galerija" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched">
+        <div className="flex items-center gap-4 mb-4">
+          <div className="size-2 bg-safety" />
+          <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
+            Galerija
+          </span>
+        </div>
+        <h2 className="font-tactical text-4xl md:text-6xl font-bold uppercase text-chalk mb-12 max-w-3xl leading-[0.9]">
+          Prethodni poslovi.
+        </h2>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-scratched border border-scratched">
+          {Array.from({ length: 6 }).map((_, i) => (
+            <div
+              key={i}
+              className="bg-steel/40 aspect-square flex items-center justify-center hazard-stripes relative group overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-matte/60" />
+              <div className="relative font-tactical text-safety text-xs font-bold tracking-[0.3em] uppercase">
+                {String(i + 1).padStart(2, "0")} // Slika
+              </div>
+            </div>
+          ))}
+        </div>
+        <p className="text-chalk/50 text-sm mt-6 font-tactical uppercase tracking-widest">
+          // Zameni placeholdere svojim fotografijama
+        </p>
+      </section>
+
       <section id="cene" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched">
         <div className="flex items-center gap-4 mb-4">
           <div className="size-2 bg-safety" />
