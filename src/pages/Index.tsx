@@ -215,7 +215,7 @@ const Index = () => {
           </div>
           <div className="flex items-baseline gap-4">
             <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Pokrivamo</span>
-            <span className="text-chalk/80">Ceo Beograd</span>
+            <span className="text-chalk/80">Ceo Beograd i okolina</span>
           </div>
         </div>
       </section>
