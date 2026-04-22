@@ -34,12 +34,6 @@ const steps = [
 const Index = () => {
   return (
     <div className="min-h-screen bg-matte text-chalk font-base selection:bg-safety selection:text-matte">
-      {/* Status bar */}
-      <div className="bg-safety text-matte font-tactical text-[10px] md:text-xs px-4 md:px-6 py-1.5 flex justify-between tracking-[0.2em] font-bold uppercase">
-        <span>Aktivne operacije</span>
-        <span>Dispečer 24/7</span>
-      </div>
-
       {/* Nav */}
       <nav className="flex justify-between items-center px-4 md:px-12 py-5 border-b border-scratched bg-matte sticky top-0 z-40">
         <a href="#" className="flex flex-col">
