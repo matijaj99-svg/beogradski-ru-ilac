@@ -5,6 +5,10 @@ import gallery3 from "@/assets/gallery-3.jpeg";
 import gallery4 from "@/assets/gallery-4.jpeg";
 import gallery5 from "@/assets/gallery-5.jpeg";
 import gallery6 from "@/assets/gallery-6.jpeg";
+import gallery7 from "@/assets/gallery-7.png";
+import gallery8 from "@/assets/gallery-8.png";
+import gallery9 from "@/assets/gallery-9.jpeg";
+import gallery10 from "@/assets/gallery-10.jpeg";
 
 const gallery = [
   { src: gallery1, alt: "Šut i otpadni materijal pripremljen za iznošenje" },
@@ -13,10 +17,16 @@ const gallery = [
   { src: gallery4, alt: "Očišćen prostor spreman za predaju" },
   { src: gallery5, alt: "Rušenje u podrumskim prostorijama" },
   { src: gallery6, alt: "Sortirane cigle pripremljene za odvoz" },
+  { src: gallery7, alt: "Kupatilo nakon rušenja keramike i sanitarija" },
+  { src: gallery8, alt: "Očišćena prostorija spremna za nove radove" },
+  { src: gallery9, alt: "Stan u procesu rušenja podnih obloga" },
+  { src: gallery10, alt: "Pripremljena betonska podloga nakon čišćenja" },
 ];
 
 const PHONE = "+381 63 1806752";
 const PHONE_HREF = "tel:+381631806752";
+const WA_HREF = "https://wa.me/381631806752";
+const VIBER_HREF = "viber://chat?number=%2B381631806752";
 
 const services = [
   { n: "01", title: "Rušenje stanova", desc: "Pregradni zidovi, keramika, parket, sanitarije." },
@@ -47,6 +57,7 @@ const Index = () => {
         <div className="hidden lg:flex gap-10 font-tactical text-sm tracking-widest uppercase text-chalk/60">
           <a href="#usluge" className="hover:text-safety">Usluge</a>
           <a href="#proces" className="hover:text-safety">Proces</a>
+          <a href="#zasto" className="hover:text-safety">Zašto nas</a>
           <a href="#cenovnik" className="hover:text-safety">Cenovnik</a>
           <a href="#galerija" className="hover:text-safety">Galerija</a>
           <a href="#kontakt" className="hover:text-safety">Kontakt</a>
@@ -86,7 +97,7 @@ const Index = () => {
             Rušimo. Iznosimo. <span className="text-stroke-chalk">Čistimo.</span>
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 max-w-2xl">
+          <div className="flex flex-col sm:flex-row gap-4 max-w-3xl flex-wrap">
             <a
               href="#cenovnik"
               className="bg-safety text-matte font-tactical uppercase font-bold text-base md:text-lg px-8 py-5 hover:bg-chalk border-2 border-safety hover:border-chalk text-center tracking-wider transition-colors"
@@ -94,16 +105,36 @@ const Index = () => {
               Pogledaj cenovnik
             </a>
             <a
-              href="#kontakt"
-              className="bg-transparent text-chalk font-tactical uppercase font-bold text-base md:text-lg px-8 py-5 hover:border-safety hover:text-safety border-2 border-scratched text-center tracking-wider transition-colors"
+              href={PHONE_HREF}
+              className="bg-transparent text-chalk font-tactical uppercase font-bold text-base md:text-lg px-8 py-5 hover:border-safety hover:text-safety border-2 border-scratched text-center tracking-wider transition-colors flex flex-col items-center justify-center leading-tight"
             >
-              Besplatna procena
+              <span>{PHONE}</span>
+              <span className="text-[10px] text-chalk/60 tracking-[0.25em] mt-1 normal-case font-normal">
+                Dostupno putem WhatsApp i Viber
+              </span>
+            </a>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-3 max-w-3xl mt-4">
+            <a
+              href={WA_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-transparent text-chalk font-tactical uppercase font-bold text-sm px-6 py-3 hover:border-safety hover:text-safety border-2 border-scratched text-center tracking-wider transition-colors"
+            >
+              WhatsApp — pošalji slike
             </a>
             <a
-              href={PHONE_HREF}
-              className="bg-transparent text-chalk font-tactical uppercase font-bold text-base md:text-lg px-8 py-5 hover:border-safety hover:text-safety border-2 border-scratched text-center tracking-wider transition-colors"
+              href={VIBER_HREF}
+              className="bg-transparent text-chalk font-tactical uppercase font-bold text-sm px-6 py-3 hover:border-safety hover:text-safety border-2 border-scratched text-center tracking-wider transition-colors"
             >
-              Pozovi odmah
+              Viber — pošalji slike
+            </a>
+            <a
+              href="#kontakt"
+              className="bg-transparent text-chalk/70 font-tactical uppercase font-bold text-sm px-6 py-3 hover:text-safety text-center tracking-wider transition-colors"
+            >
+              Besplatna procena →
             </a>
           </div>
         </div>
@@ -154,6 +185,34 @@ const Index = () => {
               <div className="font-tactical text-5xl text-safety/40 font-bold mb-6">{s.n}</div>
               <h3 className="font-tactical text-xl uppercase font-bold text-chalk mb-2">{s.t}</h3>
               <p className="text-chalk/60 text-sm">{s.d}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Why us */}
+      <section id="zasto" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched">
+        <div className="flex items-center gap-4 mb-4">
+          <div className="size-2 bg-safety" />
+          <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
+            Zašto odabrati nas
+          </span>
+        </div>
+        <h2 className="font-tactical text-4xl md:text-6xl font-bold uppercase text-chalk mb-12 max-w-3xl leading-[0.9]">
+          Iskusni. Brzi. Uredni.
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-scratched border border-scratched">
+          {[
+            { n: "100+", t: "Završenih poslova", d: "Stanovi, kupatila i lokali širom Beograda." },
+            { n: "72h", t: "Brzo izvođenje", d: "Od poziva do predaje čistog stana." },
+            { n: "0", t: "Šuta iza nas", d: "Stan ostavljamo potpuno čist i spreman." },
+            { n: "FIX", t: "Fiksna ponuda", d: "Bez skrivenih troškova nakon izlaska na teren." },
+          ].map((w) => (
+            <div key={w.t} className="bg-matte p-6 md:p-8 hover:bg-steel/40 transition-colors">
+              <div className="font-tactical text-4xl md:text-5xl text-safety font-bold mb-4">{w.n}</div>
+              <h3 className="font-tactical text-lg uppercase font-bold text-chalk mb-2">{w.t}</h3>
+              <p className="text-chalk/60 text-sm">{w.d}</p>
             </div>
           ))}
         </div>
@@ -278,10 +337,22 @@ const Index = () => {
             <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Telefon</span>
             <span className="font-tactical text-2xl md:text-3xl text-chalk group-hover:text-safety">{PHONE}</span>
           </a>
-          <div className="flex items-baseline gap-4">
+          <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="flex items-baseline gap-4 group">
+            <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">WhatsApp</span>
+            <span className="font-tactical text-lg md:text-xl text-chalk group-hover:text-safety">
+              Pošalji slike i opis — uradimo procenu
+            </span>
+          </a>
+          <a href={VIBER_HREF} className="flex items-baseline gap-4 group">
+            <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Viber</span>
+            <span className="font-tactical text-lg md:text-xl text-chalk group-hover:text-safety">
+              Pošalji slike i opis — uradimo procenu
+            </span>
+          </a>
+          <a href="mailto:apexrusenje@gmail.com" className="flex items-baseline gap-4 group">
             <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Email</span>
-            <span className="font-tactical text-lg md:text-xl text-chalk">info@apex-rusenje.rs</span>
-          </div>
+            <span className="font-tactical text-lg md:text-xl text-chalk group-hover:text-safety">apexrusenje@gmail.com</span>
+          </a>
           <div className="flex items-baseline gap-4">
             <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Pokrivamo</span>
             <span className="text-chalk/80">Ceo Beograd i okolina</span>
