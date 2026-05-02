@@ -47,8 +47,8 @@ const Index = () => {
         <div className="hidden lg:flex gap-10 font-tactical text-sm tracking-widest uppercase text-chalk/60">
           <a href="#usluge" className="hover:text-safety">Usluge</a>
           <a href="#proces" className="hover:text-safety">Proces</a>
+          <a href="#cenovnik" className="hover:text-safety">Cenovnik</a>
           <a href="#galerija" className="hover:text-safety">Galerija</a>
-          
           <a href="#kontakt" className="hover:text-safety">Kontakt</a>
         </div>
         <a
