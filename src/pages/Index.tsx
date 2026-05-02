@@ -190,6 +190,34 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Why us */}
+      <section id="zasto" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched">
+        <div className="flex items-center gap-4 mb-4">
+          <div className="size-2 bg-safety" />
+          <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
+            Zašto odabrati nas
+          </span>
+        </div>
+        <h2 className="font-tactical text-4xl md:text-6xl font-bold uppercase text-chalk mb-12 max-w-3xl leading-[0.9]">
+          Iskusni. Brzi. Uredni.
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-scratched border border-scratched">
+          {[
+            { n: "100+", t: "Završenih poslova", d: "Stanovi, kupatila i lokali širom Beograda." },
+            { n: "72h", t: "Brzo izvođenje", d: "Od poziva do predaje čistog stana." },
+            { n: "0", t: "Šuta iza nas", d: "Stan ostavljamo potpuno čist i spreman." },
+            { n: "FIX", t: "Fiksna ponuda", d: "Bez skrivenih troškova nakon izlaska na teren." },
+          ].map((w) => (
+            <div key={w.t} className="bg-matte p-6 md:p-8 hover:bg-steel/40 transition-colors">
+              <div className="font-tactical text-4xl md:text-5xl text-safety font-bold mb-4">{w.n}</div>
+              <h3 className="font-tactical text-lg uppercase font-bold text-chalk mb-2">{w.t}</h3>
+              <p className="text-chalk/60 text-sm">{w.d}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Pricing */}
       <section id="cenovnik" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched">
         <div className="flex items-center gap-4 mb-4">
