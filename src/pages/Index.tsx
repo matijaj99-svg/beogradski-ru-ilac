@@ -86,10 +86,16 @@ const Index = () => {
             Rušimo. Iznosimo. <span className="text-stroke-chalk">Čistimo.</span>
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 max-w-xl">
+          <div className="flex flex-col sm:flex-row gap-4 max-w-2xl">
+            <a
+              href="#cenovnik"
+              className="bg-safety text-matte font-tactical uppercase font-bold text-base md:text-lg px-8 py-5 hover:bg-chalk border-2 border-safety hover:border-chalk text-center tracking-wider transition-colors"
+            >
+              Pogledaj cenovnik
+            </a>
             <a
               href="#kontakt"
-              className="bg-safety text-matte font-tactical uppercase font-bold text-base md:text-lg px-8 py-5 hover:bg-chalk border-2 border-safety hover:border-chalk text-center tracking-wider transition-colors"
+              className="bg-transparent text-chalk font-tactical uppercase font-bold text-base md:text-lg px-8 py-5 hover:border-safety hover:text-safety border-2 border-scratched text-center tracking-wider transition-colors"
             >
               Besplatna procena
             </a>
