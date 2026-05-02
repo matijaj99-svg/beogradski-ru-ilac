@@ -97,7 +97,7 @@ const Index = () => {
             Rušimo. Iznosimo. <span className="text-stroke-chalk">Čistimo.</span>
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 max-w-2xl">
+          <div className="flex flex-col sm:flex-row gap-4 max-w-3xl flex-wrap">
             <a
               href="#cenovnik"
               className="bg-safety text-matte font-tactical uppercase font-bold text-base md:text-lg px-8 py-5 hover:bg-chalk border-2 border-safety hover:border-chalk text-center tracking-wider transition-colors"
@@ -105,16 +105,36 @@ const Index = () => {
               Pogledaj cenovnik
             </a>
             <a
-              href="#kontakt"
-              className="bg-transparent text-chalk font-tactical uppercase font-bold text-base md:text-lg px-8 py-5 hover:border-safety hover:text-safety border-2 border-scratched text-center tracking-wider transition-colors"
+              href={PHONE_HREF}
+              className="bg-transparent text-chalk font-tactical uppercase font-bold text-base md:text-lg px-8 py-5 hover:border-safety hover:text-safety border-2 border-scratched text-center tracking-wider transition-colors flex flex-col items-center justify-center leading-tight"
             >
-              Besplatna procena
+              <span>{PHONE}</span>
+              <span className="text-[10px] text-chalk/60 tracking-[0.25em] mt-1 normal-case font-normal">
+                Dostupno putem WhatsApp i Viber
+              </span>
+            </a>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-3 max-w-3xl mt-4">
+            <a
+              href={WA_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-transparent text-chalk font-tactical uppercase font-bold text-sm px-6 py-3 hover:border-safety hover:text-safety border-2 border-scratched text-center tracking-wider transition-colors"
+            >
+              WhatsApp — pošalji slike
             </a>
             <a
-              href={PHONE_HREF}
-              className="bg-transparent text-chalk font-tactical uppercase font-bold text-base md:text-lg px-8 py-5 hover:border-safety hover:text-safety border-2 border-scratched text-center tracking-wider transition-colors"
+              href={VIBER_HREF}
+              className="bg-transparent text-chalk font-tactical uppercase font-bold text-sm px-6 py-3 hover:border-safety hover:text-safety border-2 border-scratched text-center tracking-wider transition-colors"
             >
-              Pozovi odmah
+              Viber — pošalji slike
+            </a>
+            <a
+              href="#kontakt"
+              className="bg-transparent text-chalk/70 font-tactical uppercase font-bold text-sm px-6 py-3 hover:text-safety text-center tracking-wider transition-colors"
+            >
+              Besplatna procena →
             </a>
           </div>
         </div>
