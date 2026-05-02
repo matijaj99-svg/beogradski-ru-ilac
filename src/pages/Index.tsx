@@ -5,6 +5,10 @@ import gallery3 from "@/assets/gallery-3.jpeg";
 import gallery4 from "@/assets/gallery-4.jpeg";
 import gallery5 from "@/assets/gallery-5.jpeg";
 import gallery6 from "@/assets/gallery-6.jpeg";
+import gallery7 from "@/assets/gallery-7.png";
+import gallery8 from "@/assets/gallery-8.png";
+import gallery9 from "@/assets/gallery-9.jpeg";
+import gallery10 from "@/assets/gallery-10.jpeg";
 
 const gallery = [
   { src: gallery1, alt: "Šut i otpadni materijal pripremljen za iznošenje" },
@@ -13,10 +17,16 @@ const gallery = [
   { src: gallery4, alt: "Očišćen prostor spreman za predaju" },
   { src: gallery5, alt: "Rušenje u podrumskim prostorijama" },
   { src: gallery6, alt: "Sortirane cigle pripremljene za odvoz" },
+  { src: gallery7, alt: "Kupatilo nakon rušenja keramike i sanitarija" },
+  { src: gallery8, alt: "Očišćena prostorija spremna za nove radove" },
+  { src: gallery9, alt: "Stan u procesu rušenja podnih obloga" },
+  { src: gallery10, alt: "Pripremljena betonska podloga nakon čišćenja" },
 ];
 
 const PHONE = "+381 63 1806752";
 const PHONE_HREF = "tel:+381631806752";
+const WA_HREF = "https://wa.me/381631806752";
+const VIBER_HREF = "viber://chat?number=%2B381631806752";
 
 const services = [
   { n: "01", title: "Rušenje stanova", desc: "Pregradni zidovi, keramika, parket, sanitarije." },
