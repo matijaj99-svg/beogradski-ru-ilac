@@ -47,8 +47,8 @@ const Index = () => {
         <div className="hidden lg:flex gap-10 font-tactical text-sm tracking-widest uppercase text-chalk/60">
           <a href="#usluge" className="hover:text-safety">Usluge</a>
           <a href="#proces" className="hover:text-safety">Proces</a>
+          <a href="#cenovnik" className="hover:text-safety">Cenovnik</a>
           <a href="#galerija" className="hover:text-safety">Galerija</a>
-          
           <a href="#kontakt" className="hover:text-safety">Kontakt</a>
         </div>
         <a
@@ -86,10 +86,16 @@ const Index = () => {
             Rušimo. Iznosimo. <span className="text-stroke-chalk">Čistimo.</span>
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 max-w-xl">
+          <div className="flex flex-col sm:flex-row gap-4 max-w-2xl">
+            <a
+              href="#cenovnik"
+              className="bg-safety text-matte font-tactical uppercase font-bold text-base md:text-lg px-8 py-5 hover:bg-chalk border-2 border-safety hover:border-chalk text-center tracking-wider transition-colors"
+            >
+              Pogledaj cenovnik
+            </a>
             <a
               href="#kontakt"
-              className="bg-safety text-matte font-tactical uppercase font-bold text-base md:text-lg px-8 py-5 hover:bg-chalk border-2 border-safety hover:border-chalk text-center tracking-wider transition-colors"
+              className="bg-transparent text-chalk font-tactical uppercase font-bold text-base md:text-lg px-8 py-5 hover:border-safety hover:text-safety border-2 border-scratched text-center tracking-wider transition-colors"
             >
               Besplatna procena
             </a>
@@ -150,6 +156,77 @@ const Index = () => {
               <p className="text-chalk/60 text-sm">{s.d}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section id="cenovnik" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched">
+        <div className="flex items-center gap-4 mb-4">
+          <div className="size-2 bg-safety" />
+          <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
+            Cenovnik
+          </span>
+        </div>
+        <h2 className="font-tactical text-4xl md:text-6xl font-bold uppercase text-chalk mb-4 max-w-3xl leading-[0.9]">
+          Okvirne cene usluga
+        </h2>
+        <p className="text-chalk/60 text-sm md:text-base mb-12 max-w-2xl">
+          Jasne polazne cene. Konačna ponuda nakon izlaska na teren.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-scratched border border-scratched mb-10">
+          {[
+            { n: "01", title: "Rušenje zidova", price: "od 8 €", unit: "/m²" },
+            { n: "02", title: "Rušenje kupatila", price: "od 150 €", unit: "komplet" },
+            { n: "03", title: "Komplet usluga", price: "od 200 €", unit: "rušenje + čišćenje" },
+          ].map((p) => (
+            <article key={p.n} className="bg-matte p-6 md:p-8 hover:bg-steel/40 transition-colors">
+              <div className="font-tactical text-safety text-xs font-bold tracking-widest mb-6">
+                {p.n}
+              </div>
+              <h3 className="font-tactical text-xl md:text-2xl uppercase font-bold text-chalk mb-4">
+                {p.title}
+              </h3>
+              <div className="flex items-baseline gap-2">
+                <span className="font-tactical text-3xl md:text-4xl font-bold text-safety">{p.price}</span>
+                <span className="font-tactical text-xs text-chalk/60 uppercase tracking-wider">{p.unit}</span>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        {/* Example */}
+        <div className="border-l-4 border-safety bg-steel/40 p-6 md:p-8 mb-10">
+          <div className="font-tactical text-safety text-[10px] font-bold tracking-[0.3em] uppercase mb-3">
+            Primer
+          </div>
+          <p className="font-tactical text-lg md:text-2xl text-chalk uppercase font-bold leading-tight">
+            Rušenje kupatila 4–5m² sa iznošenjem šuta:{" "}
+            <span className="text-safety">250–400 €</span>
+          </p>
+        </div>
+
+        {/* Price factors */}
+        <div className="max-w-3xl">
+          <h3 className="font-tactical text-xl md:text-2xl uppercase font-bold text-chalk mb-6">
+            Cena zavisi od:
+          </h3>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-scratched border border-scratched">
+            {[
+              "Sprata i lifta",
+              "Količine šuta",
+              "Vrste materijala",
+              "Pristupa objektu",
+            ].map((f) => (
+              <li
+                key={f}
+                className="bg-matte p-4 md:p-5 flex items-center gap-3 font-tactical uppercase text-sm md:text-base text-chalk tracking-wider"
+              >
+                <span className="size-2 bg-safety shrink-0" />
+                {f}
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
