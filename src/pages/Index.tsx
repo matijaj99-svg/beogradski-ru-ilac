@@ -199,7 +199,7 @@ const Index = () => {
             { n: "FIX", t: "Fiksna ponuda", d: "Bez skrivenih troškova nakon izlaska na teren." },
           ].map((w) => (
             <div key={w.t} className="bg-matte p-6 md:p-8 hover:bg-steel/40 transition-colors">
-              <div className="font-tactical text-4xl md:text-5xl text-safety font-bold mb-4">{w.n}</div>
+              <div className="font-tactical text-4xl md:text-5xl text-chalk font-bold mb-4">{w.n}</div>
               <h3 className="font-tactical text-lg uppercase font-bold text-chalk mb-2">{w.t}</h3>
               <p className="text-chalk/60 text-sm">{w.d}</p>
             </div>
@@ -236,7 +236,7 @@ const Index = () => {
                 {p.title}
               </h3>
               <div className="flex items-baseline gap-2">
-                <span className="font-tactical text-3xl md:text-4xl font-bold text-safety">{p.price}</span>
+                <span className="font-tactical text-3xl md:text-4xl font-bold text-accent-orange">{p.price}</span>
                 <span className="font-tactical text-xs text-chalk/60 uppercase tracking-wider">{p.unit}</span>
               </div>
             </article>
@@ -244,13 +244,13 @@ const Index = () => {
         </div>
 
         {/* Example */}
-        <div className="border-l-4 border-safety bg-steel/40 p-6 md:p-8 mb-10">
-          <div className="font-tactical text-safety text-[10px] font-bold tracking-[0.3em] uppercase mb-3">
+        <div className="border-l-4 border-accent-orange bg-steel/60 p-6 md:p-8 mb-10">
+          <div className="font-tactical text-accent-orange text-[10px] font-bold tracking-[0.3em] uppercase mb-3">
             Primer
           </div>
           <p className="font-tactical text-lg md:text-2xl text-chalk uppercase font-bold leading-tight">
             Rušenje kupatila 4–5m² sa iznošenjem šuta:{" "}
-            <span className="text-safety">250–400 €</span>
+            <span className="text-accent-orange">250–400 €</span>
           </p>
         </div>
 
