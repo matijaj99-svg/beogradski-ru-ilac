@@ -40,6 +40,28 @@ const steps = [
 ];
 
 const Index = () => {
+  const initialReviews = [
+    { name: "Marko Petrović", rating: 5, text: "Srušili kompletno kupatilo za jedan dan, sve odneli i ostavili stan čist. Profesionalci.", job: "Rušenje kupatila — Voždovac" },
+    { name: "Ivana Jovanović", rating: 5, text: "Tačni, brzi i uredni. Cena ista kao u ponudi, bez iznenađenja.", job: "Rušenje pregradnih zidova — Novi Beograd" },
+    { name: "Stefan Nikolić", rating: 5, text: "Najbolja ekipa sa kojom sam radio. Sve počišćeno do kraja, spremno za majstore.", job: "Komplet rušenje stana 55m² — Vračar" },
+    { name: "Jelena Đorđević", rating: 4, text: "Sve odlično odrađeno, malo kasnili prvog dana ali su nadoknadili. Preporuka.", job: "Rušenje kuhinje i keramike — Zemun" },
+    { name: "Nikola Stanković", rating: 5, text: "Šut iznet isti dan, bez prašine po zgradi. Komšije zadovoljne, a to puno znači.", job: "Iznošenje šuta sa 5. sprata — Zvezdara" },
+    { name: "Ana Milić", rating: 5, text: "Korektni od poziva do predaje ključeva. Fiksna cena, čist stan, fotografije po završetku.", job: "Rušenje stana 40m² — Banovo brdo" },
+  ];
+
+  const [reviews, setReviews] = useState(initialReviews);
+  const [form, setForm] = useState({ name: "", rating: 5, job: "", text: "" });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const name = form.name.trim().slice(0, 60);
+    const job = form.job.trim().slice(0, 100);
+    const text = form.text.trim().slice(0, 500);
+    if (!name || !text) return;
+    setReviews([{ name, rating: form.rating, job, text }, ...reviews]);
+    setForm({ name: "", rating: 5, job: "", text: "" });
+  };
+
   return (
     <div className="min-h-screen bg-matte text-chalk font-base selection:bg-safety selection:text-matte">
       {/* Nav */}
