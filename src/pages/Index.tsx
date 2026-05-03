@@ -341,7 +341,126 @@ const Index = () => {
         </p>
       </section>
 
-      {/* Footer */}
+      {/* Reviews */}
+      <section id="recenzije" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel/60">
+        <div className="flex items-center gap-4 mb-4">
+          <div className="size-2 bg-safety" />
+          <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
+            Recenzije
+          </span>
+        </div>
+        <h2 className="font-tactical text-4xl md:text-6xl font-bold uppercase text-chalk mb-12 max-w-3xl leading-[0.9]">
+          Šta kažu klijenti.
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-scratched border border-scratched mb-16">
+          {reviews.map((r, i) => (
+            <article key={i} className="bg-matte p-6 md:p-8 flex flex-col">
+              <div className="flex gap-1 mb-4">
+                {Array.from({ length: 5 }).map((_, j) => (
+                  <Star
+                    key={j}
+                    className={
+                      j < r.rating
+                        ? "size-4 fill-accent-orange text-accent-orange"
+                        : "size-4 text-scratched"
+                    }
+                  />
+                ))}
+              </div>
+              <p className="text-chalk/80 text-sm md:text-base mb-6 flex-1">"{r.text}"</p>
+              <div className="border-t border-scratched pt-4">
+                <div className="font-tactical uppercase font-bold text-chalk text-sm tracking-wider">
+                  {r.name}
+                </div>
+                {r.job && (
+                  <div className="font-tactical text-[11px] text-chalk/60 uppercase tracking-widest mt-1">
+                    {r.job}
+                  </div>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+
+        {/* Review form */}
+        <div className="max-w-2xl">
+          <h3 className="font-tactical text-2xl md:text-3xl uppercase font-bold text-chalk mb-6">
+            Ostavi recenziju
+          </h3>
+          <form onSubmit={handleSubmit} className="space-y-5 bg-matte border border-scratched p-6 md:p-8">
+            <div>
+              <label className="block font-tactical text-xs uppercase tracking-widest text-chalk/70 mb-2">
+                Ime i prezime
+              </label>
+              <input
+                type="text"
+                required
+                maxLength={60}
+                value={form.name}
+                onChange={(e) => setForm({ ...form, name: e.target.value })}
+                className="w-full bg-matte border border-scratched px-4 py-3 font-base text-chalk focus:outline-none focus:border-safety"
+              />
+            </div>
+            <div>
+              <label className="block font-tactical text-xs uppercase tracking-widest text-chalk/70 mb-2">
+                Ocena
+              </label>
+              <div className="flex gap-1">
+                {[1, 2, 3, 4, 5].map((n) => (
+                  <button
+                    type="button"
+                    key={n}
+                    onClick={() => setForm({ ...form, rating: n })}
+                    aria-label={`${n} zvezdica`}
+                    className="p-1"
+                  >
+                    <Star
+                      className={
+                        n <= form.rating
+                          ? "size-7 fill-accent-orange text-accent-orange"
+                          : "size-7 text-scratched"
+                      }
+                    />
+                  </button>
+                ))}
+              </div>
+            </div>
+            <div>
+              <label className="block font-tactical text-xs uppercase tracking-widest text-chalk/70 mb-2">
+                Opis posla
+              </label>
+              <input
+                type="text"
+                maxLength={100}
+                placeholder="npr. Rušenje kupatila — Vračar"
+                value={form.job}
+                onChange={(e) => setForm({ ...form, job: e.target.value })}
+                className="w-full bg-matte border border-scratched px-4 py-3 font-base text-chalk focus:outline-none focus:border-safety"
+              />
+            </div>
+            <div>
+              <label className="block font-tactical text-xs uppercase tracking-widest text-chalk/70 mb-2">
+                Komentar
+              </label>
+              <textarea
+                required
+                maxLength={500}
+                rows={4}
+                value={form.text}
+                onChange={(e) => setForm({ ...form, text: e.target.value })}
+                className="w-full bg-matte border border-scratched px-4 py-3 font-base text-chalk focus:outline-none focus:border-safety resize-none"
+              />
+            </div>
+            <button
+              type="submit"
+              className="bg-accent-orange text-matte font-tactical uppercase font-bold text-base px-8 py-4 hover:bg-chalk border-2 border-accent-orange hover:border-chalk tracking-wider transition-colors"
+            >
+              Pošalji recenziju
+            </button>
+          </form>
+        </div>
+      </section>
       <footer className="px-4 md:px-12 py-10 flex flex-col md:flex-row gap-6 justify-between items-start md:items-center">
         <div>
           <div className="font-tactical text-xl font-bold uppercase tracking-widest text-chalk">Apex Rušenje</div>
