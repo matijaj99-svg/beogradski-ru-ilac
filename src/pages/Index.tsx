@@ -4,7 +4,6 @@ import gallery2 from "@/assets/gallery-2.jpeg";
 import gallery3 from "@/assets/gallery-3.jpeg";
 import gallery4 from "@/assets/gallery-4.jpeg";
 import gallery5 from "@/assets/gallery-5.jpeg";
-import gallery6 from "@/assets/gallery-6.jpeg";
 import gallery7 from "@/assets/gallery-7.png";
 import gallery8 from "@/assets/gallery-8.png";
 import gallery9 from "@/assets/gallery-9.jpeg";
