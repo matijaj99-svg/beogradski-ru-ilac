@@ -43,29 +43,23 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-matte text-chalk font-base selection:bg-safety selection:text-matte">
       {/* Nav */}
-      <nav className="flex justify-between items-center px-4 md:px-12 py-5 border-b border-scratched bg-matte sticky top-0 z-40">
+      <nav className="flex justify-between items-center px-4 md:px-12 py-5 border-b border-safety bg-safety sticky top-0 z-40">
         <a href="#" className="flex flex-col">
-          <span className="font-tactical text-xl md:text-2xl font-bold uppercase tracking-widest leading-none text-chalk">
+          <span className="font-tactical text-xl md:text-2xl font-bold uppercase tracking-widest leading-none text-matte">
             Apex Rušenje
           </span>
-          <span className="font-tactical text-[10px] text-safety tracking-[0.3em] uppercase mt-1">
+          <span className="font-tactical text-[10px] text-matte/80 tracking-[0.3em] uppercase mt-1">
             Rušenje · Šut · Čišćenje
           </span>
         </a>
-        <div className="hidden lg:flex gap-10 font-tactical text-sm tracking-widest uppercase text-chalk/60">
-          <a href="#usluge" className="hover:text-safety">Usluge</a>
-          <a href="#proces" className="hover:text-safety">Proces</a>
-          <a href="#zasto" className="hover:text-safety">Zašto nas</a>
-          <a href="#cenovnik" className="hover:text-safety">Cenovnik</a>
-          <a href="#galerija" className="hover:text-safety">Galerija</a>
-          <a href="#kontakt" className="hover:text-safety">Kontakt</a>
+        <div className="hidden lg:flex gap-10 font-tactical text-sm tracking-widest uppercase text-matte/80">
+          <a href="#usluge" className="hover:text-matte">Usluge</a>
+          <a href="#proces" className="hover:text-matte">Proces</a>
+          <a href="#zasto" className="hover:text-matte">Zašto nas</a>
+          <a href="#cenovnik" className="hover:text-matte">Cenovnik</a>
+          <a href="#galerija" className="hover:text-matte">Galerija</a>
+          <a href="#kontakt" className="hover:text-matte">Kontakt</a>
         </div>
-        <a
-          href={PHONE_HREF}
-          className="font-tactical text-base md:text-xl text-safety tracking-widest hover:text-chalk"
-        >
-          {PHONE}
-        </a>
       </nav>
 
       {/* Hero */}
