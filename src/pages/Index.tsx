@@ -148,7 +148,7 @@ const Index = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-scratched border border-scratched">
           {steps.map((s) => (
             <div key={s.n} className="bg-matte p-6 md:p-8 hover:bg-steel transition-colors">
-              <div className="font-tactical text-5xl text-safety/40 font-bold mb-6">{s.n}</div>
+              <div className="font-tactical text-5xl text-chalk font-bold mb-6">{s.n}</div>
               <h3 className="font-tactical text-xl uppercase font-bold text-chalk mb-2">{s.t}</h3>
               <p className="text-chalk/60 text-sm">{s.d}</p>
             </div>
