@@ -4,7 +4,6 @@ import gallery2 from "@/assets/gallery-2.jpeg";
 import gallery3 from "@/assets/gallery-3.jpeg";
 import gallery4 from "@/assets/gallery-4.jpeg";
 import gallery5 from "@/assets/gallery-5.jpeg";
-import gallery6 from "@/assets/gallery-6.jpeg";
 import gallery7 from "@/assets/gallery-7.png";
 import gallery8 from "@/assets/gallery-8.png";
 import gallery9 from "@/assets/gallery-9.jpeg";
@@ -16,7 +15,6 @@ const gallery = [
   { src: gallery3, alt: "Kontejner sa drvenim otpadom" },
   { src: gallery4, alt: "Očišćen prostor spreman za predaju" },
   { src: gallery5, alt: "Rušenje u podrumskim prostorijama" },
-  { src: gallery6, alt: "Sortirane cigle pripremljene za odvoz" },
   { src: gallery7, alt: "Kupatilo nakon rušenja keramike i sanitarija" },
   { src: gallery8, alt: "Očišćena prostorija spremna za nove radove" },
   { src: gallery9, alt: "Stan u procesu rušenja podnih obloga" },
@@ -25,8 +23,6 @@ const gallery = [
 
 const PHONE = "+381 63 1806752";
 const PHONE_HREF = "tel:+381631806752";
-const WA_HREF = "https://wa.me/381631806752";
-const VIBER_HREF = "viber://chat?number=%2B381631806752";
 
 const services = [
   { n: "01", title: "Rušenje stanova", desc: "Pregradni zidovi, keramika, parket, sanitarije." },
@@ -45,29 +41,23 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-matte text-chalk font-base selection:bg-safety selection:text-matte">
       {/* Nav */}
-      <nav className="flex justify-between items-center px-4 md:px-12 py-5 border-b border-scratched bg-matte sticky top-0 z-40">
+      <nav className="flex justify-between items-center px-4 md:px-12 py-5 border-b border-safety bg-safety sticky top-0 z-40">
         <a href="#" className="flex flex-col">
-          <span className="font-tactical text-xl md:text-2xl font-bold uppercase tracking-widest leading-none text-chalk">
+          <span className="font-tactical text-xl md:text-2xl font-bold uppercase tracking-widest leading-none text-matte">
             Apex Rušenje
           </span>
-          <span className="font-tactical text-[10px] text-safety tracking-[0.3em] uppercase mt-1">
+          <span className="font-tactical text-[10px] text-matte/80 tracking-[0.3em] uppercase mt-1">
             Rušenje · Šut · Čišćenje
           </span>
         </a>
-        <div className="hidden lg:flex gap-10 font-tactical text-sm tracking-widest uppercase text-chalk/60">
-          <a href="#usluge" className="hover:text-safety">Usluge</a>
-          <a href="#proces" className="hover:text-safety">Proces</a>
-          <a href="#zasto" className="hover:text-safety">Zašto nas</a>
-          <a href="#cenovnik" className="hover:text-safety">Cenovnik</a>
-          <a href="#galerija" className="hover:text-safety">Galerija</a>
-          <a href="#kontakt" className="hover:text-safety">Kontakt</a>
+        <div className="hidden lg:flex gap-10 font-tactical text-sm tracking-widest uppercase text-matte/80">
+          <a href="#usluge" className="hover:text-matte">Usluge</a>
+          <a href="#proces" className="hover:text-matte">Proces</a>
+          <a href="#zasto" className="hover:text-matte">Zašto nas</a>
+          <a href="#cenovnik" className="hover:text-matte">Cenovnik</a>
+          <a href="#galerija" className="hover:text-matte">Galerija</a>
+          <a href="#kontakt" className="hover:text-matte">Kontakt</a>
         </div>
-        <a
-          href={PHONE_HREF}
-          className="font-tactical text-base md:text-xl text-safety tracking-widest hover:text-chalk"
-        >
-          {PHONE}
-        </a>
       </nav>
 
       {/* Hero */}
@@ -106,42 +96,16 @@ const Index = () => {
             </a>
             <a
               href={PHONE_HREF}
-              className="bg-transparent text-chalk font-tactical uppercase font-bold text-base md:text-lg px-8 py-5 hover:border-safety hover:text-safety border-2 border-scratched text-center tracking-wider transition-colors flex flex-col items-center justify-center leading-tight"
+              className="bg-transparent text-chalk font-tactical uppercase font-bold text-base md:text-lg px-8 py-5 hover:border-safety hover:text-safety border-2 border-scratched text-center tracking-wider transition-colors"
             >
-              <span>{PHONE}</span>
-              <span className="text-[10px] text-chalk/60 tracking-[0.25em] mt-1 normal-case font-normal">
-                Dostupno putem WhatsApp i Viber
-              </span>
-            </a>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-3 max-w-3xl mt-4">
-            <a
-              href={WA_HREF}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-transparent text-chalk font-tactical uppercase font-bold text-sm px-6 py-3 hover:border-safety hover:text-safety border-2 border-scratched text-center tracking-wider transition-colors"
-            >
-              WhatsApp — pošalji slike
-            </a>
-            <a
-              href={VIBER_HREF}
-              className="bg-transparent text-chalk font-tactical uppercase font-bold text-sm px-6 py-3 hover:border-safety hover:text-safety border-2 border-scratched text-center tracking-wider transition-colors"
-            >
-              Viber — pošalji slike
-            </a>
-            <a
-              href="#kontakt"
-              className="bg-transparent text-chalk/70 font-tactical uppercase font-bold text-sm px-6 py-3 hover:text-safety text-center tracking-wider transition-colors"
-            >
-              Besplatna procena →
+              {PHONE}
             </a>
           </div>
         </div>
       </header>
 
       {/* Services */}
-      <section id="usluge" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched">
+      <section id="usluge" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel/30">
         <div className="flex items-center gap-4 mb-4">
           <div className="size-2 bg-safety" />
           <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
@@ -168,7 +132,7 @@ const Index = () => {
       </section>
 
       {/* Process */}
-      <section id="proces" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel/30">
+      <section id="proces" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched">
         <div className="flex items-center gap-4 mb-4">
           <div className="size-2 bg-safety" />
           <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
@@ -182,7 +146,7 @@ const Index = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-scratched border border-scratched">
           {steps.map((s) => (
             <div key={s.n} className="bg-matte p-6 md:p-8 hover:bg-steel transition-colors">
-              <div className="font-tactical text-5xl text-safety/40 font-bold mb-6">{s.n}</div>
+              <div className="font-tactical text-5xl text-chalk font-bold mb-6">{s.n}</div>
               <h3 className="font-tactical text-xl uppercase font-bold text-chalk mb-2">{s.t}</h3>
               <p className="text-chalk/60 text-sm">{s.d}</p>
             </div>
@@ -191,7 +155,7 @@ const Index = () => {
       </section>
 
       {/* Why us */}
-      <section id="zasto" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched">
+      <section id="zasto" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel/30">
         <div className="flex items-center gap-4 mb-4">
           <div className="size-2 bg-safety" />
           <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
@@ -236,7 +200,7 @@ const Index = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-scratched border border-scratched mb-10">
           {[
             { n: "01", title: "Rušenje zidova", price: "od 8 €", unit: "/m²" },
-            { n: "02", title: "Rušenje kupatila", price: "od 150 €", unit: "komplet" },
+            { n: "02", title: "Rušenje kupatila", price: "od 200 €", unit: "komplet" },
             { n: "03", title: "Komplet usluga", price: "od 200 €", unit: "rušenje + čišćenje" },
           ].map((p) => (
             <article key={p.n} className="bg-matte p-6 md:p-8 hover:bg-steel/40 transition-colors">
@@ -290,7 +254,7 @@ const Index = () => {
       </section>
 
       {/* Gallery */}
-      <section id="galerija" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched">
+      <section id="galerija" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel/30">
         <div className="flex items-center gap-4 mb-4">
           <div className="size-2 bg-safety" />
           <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
@@ -337,18 +301,6 @@ const Index = () => {
             <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Telefon</span>
             <span className="font-tactical text-2xl md:text-3xl text-chalk group-hover:text-safety">{PHONE}</span>
           </a>
-          <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="flex items-baseline gap-4 group">
-            <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">WhatsApp</span>
-            <span className="font-tactical text-lg md:text-xl text-chalk group-hover:text-safety">
-              Pošalji slike i opis — uradimo procenu
-            </span>
-          </a>
-          <a href={VIBER_HREF} className="flex items-baseline gap-4 group">
-            <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Viber</span>
-            <span className="font-tactical text-lg md:text-xl text-chalk group-hover:text-safety">
-              Pošalji slike i opis — uradimo procenu
-            </span>
-          </a>
           <a href="mailto:apexrusenje@gmail.com" className="flex items-baseline gap-4 group">
             <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Email</span>
             <span className="font-tactical text-lg md:text-xl text-chalk group-hover:text-safety">apexrusenje@gmail.com</span>
@@ -358,6 +310,10 @@ const Index = () => {
             <span className="text-chalk/80">Ceo Beograd i okolina</span>
           </div>
         </div>
+
+        <p className="mt-10 pt-6 border-t border-scratched font-tactical text-sm md:text-base text-chalk/70 max-w-2xl">
+          Moguće slanje slika na WhatsApp i Viber za procenu i dobijanje ponude.
+        </p>
       </section>
 
       {/* Footer */}
