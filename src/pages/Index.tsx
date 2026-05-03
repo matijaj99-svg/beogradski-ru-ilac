@@ -23,8 +23,6 @@ const gallery = [
 
 const PHONE = "+381 63 1806752";
 const PHONE_HREF = "tel:+381631806752";
-const WA_HREF = "https://wa.me/381631806752";
-const VIBER_HREF = "viber://chat?number=%2B381631806752";
 
 const services = [
   { n: "01", title: "Rušenje stanova", desc: "Pregradni zidovi, keramika, parket, sanitarije." },
