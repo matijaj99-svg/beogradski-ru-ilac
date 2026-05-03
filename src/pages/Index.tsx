@@ -202,7 +202,7 @@ const Index = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-scratched border border-scratched mb-10">
           {[
             { n: "01", title: "Rušenje zidova", price: "od 8 €", unit: "/m²" },
-            { n: "02", title: "Rušenje kupatila", price: "od 150 €", unit: "komplet" },
+            { n: "02", title: "Rušenje kupatila", price: "od 200 €", unit: "komplet" },
             { n: "03", title: "Komplet usluga", price: "od 200 €", unit: "rušenje + čišćenje" },
           ].map((p) => (
             <article key={p.n} className="bg-matte p-6 md:p-8 hover:bg-steel/40 transition-colors">
