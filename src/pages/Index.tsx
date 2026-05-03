@@ -134,7 +134,7 @@ const Index = () => {
       </section>
 
       {/* Process */}
-      <section id="proces" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel/30">
+      <section id="proces" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched">
         <div className="flex items-center gap-4 mb-4">
           <div className="size-2 bg-safety" />
           <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
