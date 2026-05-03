@@ -52,6 +52,7 @@ export default {
         scratched: "hsl(var(--scratched))",
         safety: "hsl(var(--safety))",
         chalk: "hsl(var(--chalk))",
+        "accent-orange": "hsl(var(--accent-orange))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

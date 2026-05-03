@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { Star } from "lucide-react";
 import heroWorker from "@/assets/hero-worker.jpg";
 import gallery1 from "@/assets/gallery-1.jpeg";
 import gallery2 from "@/assets/gallery-2.jpeg";
@@ -38,6 +40,28 @@ const steps = [
 ];
 
 const Index = () => {
+  const initialReviews = [
+    { name: "Marko Petrović", rating: 5, text: "Srušili kompletno kupatilo za jedan dan, sve odneli i ostavili stan čist. Profesionalci.", job: "Rušenje kupatila — Voždovac" },
+    { name: "Ivana Jovanović", rating: 5, text: "Tačni, brzi i uredni. Cena ista kao u ponudi, bez iznenađenja.", job: "Rušenje pregradnih zidova — Novi Beograd" },
+    { name: "Stefan Nikolić", rating: 5, text: "Najbolja ekipa sa kojom sam radio. Sve počišćeno do kraja, spremno za majstore.", job: "Komplet rušenje stana 55m² — Vračar" },
+    { name: "Jelena Đorđević", rating: 4, text: "Sve odlično odrađeno, malo kasnili prvog dana ali su nadoknadili. Preporuka.", job: "Rušenje kuhinje i keramike — Zemun" },
+    { name: "Nikola Stanković", rating: 5, text: "Šut iznet isti dan, bez prašine po zgradi. Komšije zadovoljne, a to puno znači.", job: "Iznošenje šuta sa 5. sprata — Zvezdara" },
+    { name: "Ana Milić", rating: 5, text: "Korektni od poziva do predaje ključeva. Fiksna cena, čist stan, fotografije po završetku.", job: "Rušenje stana 40m² — Banovo brdo" },
+  ];
+
+  const [reviews, setReviews] = useState(initialReviews);
+  const [form, setForm] = useState({ name: "", rating: 5, job: "", text: "" });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const name = form.name.trim().slice(0, 60);
+    const job = form.job.trim().slice(0, 100);
+    const text = form.text.trim().slice(0, 500);
+    if (!name || !text) return;
+    setReviews([{ name, rating: form.rating, job, text }, ...reviews]);
+    setForm({ name: "", rating: 5, job: "", text: "" });
+  };
+
   return (
     <div className="min-h-screen bg-matte text-chalk font-base selection:bg-safety selection:text-matte">
       {/* Nav */}
@@ -56,6 +80,7 @@ const Index = () => {
           <a href="#zasto" className="hover:text-matte">Zašto nas</a>
           <a href="#cenovnik" className="hover:text-matte">Cenovnik</a>
           <a href="#galerija" className="hover:text-matte">Galerija</a>
+          <a href="#recenzije" className="hover:text-matte">Recenzije</a>
           <a href="#kontakt" className="hover:text-matte">Kontakt</a>
         </div>
       </nav>
@@ -90,7 +115,7 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-4 max-w-3xl flex-wrap">
             <a
               href="#cenovnik"
-              className="bg-safety text-matte font-tactical uppercase font-bold text-base md:text-lg px-8 py-5 hover:bg-chalk border-2 border-safety hover:border-chalk text-center tracking-wider transition-colors"
+              className="bg-accent-orange text-matte font-tactical uppercase font-bold text-base md:text-lg px-8 py-5 hover:bg-chalk border-2 border-accent-orange hover:border-chalk text-center tracking-wider transition-colors"
             >
               Pogledaj cenovnik
             </a>
@@ -105,7 +130,7 @@ const Index = () => {
       </header>
 
       {/* Services */}
-      <section id="usluge" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel/30">
+      <section id="usluge" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel/60">
         <div className="flex items-center gap-4 mb-4">
           <div className="size-2 bg-safety" />
           <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
@@ -155,7 +180,7 @@ const Index = () => {
       </section>
 
       {/* Why us */}
-      <section id="zasto" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel/30">
+      <section id="zasto" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel/60">
         <div className="flex items-center gap-4 mb-4">
           <div className="size-2 bg-safety" />
           <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
@@ -174,7 +199,7 @@ const Index = () => {
             { n: "FIX", t: "Fiksna ponuda", d: "Bez skrivenih troškova nakon izlaska na teren." },
           ].map((w) => (
             <div key={w.t} className="bg-matte p-6 md:p-8 hover:bg-steel/40 transition-colors">
-              <div className="font-tactical text-4xl md:text-5xl text-safety font-bold mb-4">{w.n}</div>
+              <div className="font-tactical text-4xl md:text-5xl text-chalk font-bold mb-4">{w.n}</div>
               <h3 className="font-tactical text-lg uppercase font-bold text-chalk mb-2">{w.t}</h3>
               <p className="text-chalk/60 text-sm">{w.d}</p>
             </div>
@@ -211,7 +236,7 @@ const Index = () => {
                 {p.title}
               </h3>
               <div className="flex items-baseline gap-2">
-                <span className="font-tactical text-3xl md:text-4xl font-bold text-safety">{p.price}</span>
+                <span className="font-tactical text-3xl md:text-4xl font-bold text-accent-orange">{p.price}</span>
                 <span className="font-tactical text-xs text-chalk/60 uppercase tracking-wider">{p.unit}</span>
               </div>
             </article>
@@ -219,13 +244,13 @@ const Index = () => {
         </div>
 
         {/* Example */}
-        <div className="border-l-4 border-safety bg-steel/40 p-6 md:p-8 mb-10">
-          <div className="font-tactical text-safety text-[10px] font-bold tracking-[0.3em] uppercase mb-3">
+        <div className="border-l-4 border-accent-orange bg-steel/60 p-6 md:p-8 mb-10">
+          <div className="font-tactical text-accent-orange text-[10px] font-bold tracking-[0.3em] uppercase mb-3">
             Primer
           </div>
           <p className="font-tactical text-lg md:text-2xl text-chalk uppercase font-bold leading-tight">
             Rušenje kupatila 4–5m² sa iznošenjem šuta:{" "}
-            <span className="text-safety">250–400 €</span>
+            <span className="text-accent-orange">250–400 €</span>
           </p>
         </div>
 
@@ -254,7 +279,7 @@ const Index = () => {
       </section>
 
       {/* Gallery */}
-      <section id="galerija" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel/30">
+      <section id="galerija" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel/60">
         <div className="flex items-center gap-4 mb-4">
           <div className="size-2 bg-safety" />
           <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
@@ -316,7 +341,126 @@ const Index = () => {
         </p>
       </section>
 
-      {/* Footer */}
+      {/* Reviews */}
+      <section id="recenzije" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel/60">
+        <div className="flex items-center gap-4 mb-4">
+          <div className="size-2 bg-safety" />
+          <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
+            Recenzije
+          </span>
+        </div>
+        <h2 className="font-tactical text-4xl md:text-6xl font-bold uppercase text-chalk mb-12 max-w-3xl leading-[0.9]">
+          Šta kažu klijenti.
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-scratched border border-scratched mb-16">
+          {reviews.map((r, i) => (
+            <article key={i} className="bg-matte p-6 md:p-8 flex flex-col">
+              <div className="flex gap-1 mb-4">
+                {Array.from({ length: 5 }).map((_, j) => (
+                  <Star
+                    key={j}
+                    className={
+                      j < r.rating
+                        ? "size-4 fill-accent-orange text-accent-orange"
+                        : "size-4 text-scratched"
+                    }
+                  />
+                ))}
+              </div>
+              <p className="text-chalk/80 text-sm md:text-base mb-6 flex-1">"{r.text}"</p>
+              <div className="border-t border-scratched pt-4">
+                <div className="font-tactical uppercase font-bold text-chalk text-sm tracking-wider">
+                  {r.name}
+                </div>
+                {r.job && (
+                  <div className="font-tactical text-[11px] text-chalk/60 uppercase tracking-widest mt-1">
+                    {r.job}
+                  </div>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+
+        {/* Review form */}
+        <div className="max-w-2xl">
+          <h3 className="font-tactical text-2xl md:text-3xl uppercase font-bold text-chalk mb-6">
+            Ostavi recenziju
+          </h3>
+          <form onSubmit={handleSubmit} className="space-y-5 bg-matte border border-scratched p-6 md:p-8">
+            <div>
+              <label className="block font-tactical text-xs uppercase tracking-widest text-chalk/70 mb-2">
+                Ime i prezime
+              </label>
+              <input
+                type="text"
+                required
+                maxLength={60}
+                value={form.name}
+                onChange={(e) => setForm({ ...form, name: e.target.value })}
+                className="w-full bg-matte border border-scratched px-4 py-3 font-base text-chalk focus:outline-none focus:border-safety"
+              />
+            </div>
+            <div>
+              <label className="block font-tactical text-xs uppercase tracking-widest text-chalk/70 mb-2">
+                Ocena
+              </label>
+              <div className="flex gap-1">
+                {[1, 2, 3, 4, 5].map((n) => (
+                  <button
+                    type="button"
+                    key={n}
+                    onClick={() => setForm({ ...form, rating: n })}
+                    aria-label={`${n} zvezdica`}
+                    className="p-1"
+                  >
+                    <Star
+                      className={
+                        n <= form.rating
+                          ? "size-7 fill-accent-orange text-accent-orange"
+                          : "size-7 text-scratched"
+                      }
+                    />
+                  </button>
+                ))}
+              </div>
+            </div>
+            <div>
+              <label className="block font-tactical text-xs uppercase tracking-widest text-chalk/70 mb-2">
+                Opis posla
+              </label>
+              <input
+                type="text"
+                maxLength={100}
+                placeholder="npr. Rušenje kupatila — Vračar"
+                value={form.job}
+                onChange={(e) => setForm({ ...form, job: e.target.value })}
+                className="w-full bg-matte border border-scratched px-4 py-3 font-base text-chalk focus:outline-none focus:border-safety"
+              />
+            </div>
+            <div>
+              <label className="block font-tactical text-xs uppercase tracking-widest text-chalk/70 mb-2">
+                Komentar
+              </label>
+              <textarea
+                required
+                maxLength={500}
+                rows={4}
+                value={form.text}
+                onChange={(e) => setForm({ ...form, text: e.target.value })}
+                className="w-full bg-matte border border-scratched px-4 py-3 font-base text-chalk focus:outline-none focus:border-safety resize-none"
+              />
+            </div>
+            <button
+              type="submit"
+              className="bg-accent-orange text-matte font-tactical uppercase font-bold text-base px-8 py-4 hover:bg-chalk border-2 border-accent-orange hover:border-chalk tracking-wider transition-colors"
+            >
+              Pošalji recenziju
+            </button>
+          </form>
+        </div>
+      </section>
       <footer className="px-4 md:px-12 py-10 flex flex-col md:flex-row gap-6 justify-between items-start md:items-center">
         <div>
           <div className="font-tactical text-xl font-bold uppercase tracking-widest text-chalk">Apex Rušenje</div>
