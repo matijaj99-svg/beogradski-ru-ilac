@@ -98,35 +98,9 @@ const Index = () => {
             </a>
             <a
               href={PHONE_HREF}
-              className="bg-transparent text-chalk font-tactical uppercase font-bold text-base md:text-lg px-8 py-5 hover:border-safety hover:text-safety border-2 border-scratched text-center tracking-wider transition-colors flex flex-col items-center justify-center leading-tight"
+              className="bg-transparent text-chalk font-tactical uppercase font-bold text-base md:text-lg px-8 py-5 hover:border-safety hover:text-safety border-2 border-scratched text-center tracking-wider transition-colors"
             >
-              <span>{PHONE}</span>
-              <span className="text-[10px] text-chalk/60 tracking-[0.25em] mt-1 normal-case font-normal">
-                Dostupno putem WhatsApp i Viber
-              </span>
-            </a>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-3 max-w-3xl mt-4">
-            <a
-              href={WA_HREF}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-transparent text-chalk font-tactical uppercase font-bold text-sm px-6 py-3 hover:border-safety hover:text-safety border-2 border-scratched text-center tracking-wider transition-colors"
-            >
-              WhatsApp — pošalji slike
-            </a>
-            <a
-              href={VIBER_HREF}
-              className="bg-transparent text-chalk font-tactical uppercase font-bold text-sm px-6 py-3 hover:border-safety hover:text-safety border-2 border-scratched text-center tracking-wider transition-colors"
-            >
-              Viber — pošalji slike
-            </a>
-            <a
-              href="#kontakt"
-              className="bg-transparent text-chalk/70 font-tactical uppercase font-bold text-sm px-6 py-3 hover:text-safety text-center tracking-wider transition-colors"
-            >
-              Besplatna procena →
+              {PHONE}
             </a>
           </div>
         </div>
