@@ -157,7 +157,7 @@ const Index = () => {
       </section>
 
       {/* Why us */}
-      <section id="zasto" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched">
+      <section id="zasto" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel/30">
         <div className="flex items-center gap-4 mb-4">
           <div className="size-2 bg-safety" />
           <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
