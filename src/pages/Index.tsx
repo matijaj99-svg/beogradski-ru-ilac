@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { Star } from "lucide-react";
 import heroWorker from "@/assets/hero-worker.jpg";
 import gallery1 from "@/assets/gallery-1.jpeg";
 import gallery2 from "@/assets/gallery-2.jpeg";
