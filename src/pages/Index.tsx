@@ -303,18 +303,6 @@ const Index = () => {
             <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Telefon</span>
             <span className="font-tactical text-2xl md:text-3xl text-chalk group-hover:text-safety">{PHONE}</span>
           </a>
-          <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="flex items-baseline gap-4 group">
-            <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">WhatsApp</span>
-            <span className="font-tactical text-lg md:text-xl text-chalk group-hover:text-safety">
-              Pošalji slike i opis — uradimo procenu
-            </span>
-          </a>
-          <a href={VIBER_HREF} className="flex items-baseline gap-4 group">
-            <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Viber</span>
-            <span className="font-tactical text-lg md:text-xl text-chalk group-hover:text-safety">
-              Pošalji slike i opis — uradimo procenu
-            </span>
-          </a>
           <a href="mailto:apexrusenje@gmail.com" className="flex items-baseline gap-4 group">
             <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Email</span>
             <span className="font-tactical text-lg md:text-xl text-chalk group-hover:text-safety">apexrusenje@gmail.com</span>
@@ -324,6 +312,10 @@ const Index = () => {
             <span className="text-chalk/80">Ceo Beograd i okolina</span>
           </div>
         </div>
+
+        <p className="mt-10 pt-6 border-t border-scratched font-tactical text-sm md:text-base text-chalk/70 max-w-2xl">
+          Moguće slanje slika na WhatsApp i Viber za procenu i dobijanje ponude.
+        </p>
       </section>
 
       {/* Footer */}
