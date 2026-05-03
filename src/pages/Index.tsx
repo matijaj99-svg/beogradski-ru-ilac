@@ -15,7 +15,6 @@ const gallery = [
   { src: gallery3, alt: "Kontejner sa drvenim otpadom" },
   { src: gallery4, alt: "Očišćen prostor spreman za predaju" },
   { src: gallery5, alt: "Rušenje u podrumskim prostorijama" },
-  { src: gallery6, alt: "Sortirane cigle pripremljene za odvoz" },
   { src: gallery7, alt: "Kupatilo nakon rušenja keramike i sanitarija" },
   { src: gallery8, alt: "Očišćena prostorija spremna za nove radove" },
   { src: gallery9, alt: "Stan u procesu rušenja podnih obloga" },
