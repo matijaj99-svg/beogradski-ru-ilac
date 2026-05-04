@@ -462,7 +462,7 @@ const Index = () => {
           </form>
         </div>
       </section>
-      <footer className="px-4 md:px-12 py-10 flex flex-col md:flex-row gap-6 justify-between items-start md:items-center">
+      <footer className="px-4 md:px-12 py-10 pb-28 lg:pb-10 flex flex-col md:flex-row gap-6 justify-between items-start md:items-center">
         <div>
           <div className="font-tactical text-xl font-bold uppercase tracking-widest text-chalk">Apex Rušenje</div>
           <div className="font-tactical text-[10px] text-safety tracking-[0.3em] uppercase mt-1">
