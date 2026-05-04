@@ -85,7 +85,7 @@ const Index = () => {
         </div>
         <a
           href="#kontakt"
-          className="hidden lg:inline-block ml-6 bg-matte text-chalk font-tactical uppercase font-bold text-xs px-4 py-2 border-2 border-matte hover:bg-transparent hover:text-matte tracking-widest transition-colors"
+          className="ml-4 bg-matte text-chalk font-tactical uppercase font-bold text-[10px] md:text-xs px-3 py-2 md:px-4 md:py-2 border-2 border-matte hover:bg-transparent hover:text-matte tracking-widest transition-colors"
         >
           Kontakt
         </a>
