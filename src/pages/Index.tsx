@@ -47,6 +47,7 @@ const Index = () => {
     { name: "Jelena Đorđević", rating: 4, text: "Sve odlično odrađeno, malo kasnili prvog dana ali su nadoknadili. Preporuka.", job: "Rušenje kuhinje i keramike — Zemun" },
     { name: "Nikola Stanković", rating: 5, text: "Šut iznet isti dan, bez prašine po zgradi. Komšije zadovoljne, a to puno znači.", job: "Iznošenje šuta sa 5. sprata — Zvezdara" },
     { name: "Ana Milić", rating: 5, text: "Korektni od poziva do predaje ključeva. Fiksna cena, čist stan, fotografije po završetku.", job: "Rušenje stana 40m² — Banovo brdo" },
+    { name: "Miloš Pavlović", rating: 4, text: "Solidno odrađeno, malo više prašine nego što sam očekivao ali su sve počistili pre odlaska. Cena korektna.", job: "Rušenje pregradnog zida — Mirijevo" },
   ];
 
   const [reviews, setReviews] = useState(initialReviews);
@@ -114,23 +115,23 @@ const Index = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 max-w-3xl flex-wrap">
             <a
-              href="#cenovnik"
-              className="bg-accent-orange text-matte font-tactical uppercase font-bold text-base md:text-lg px-8 py-5 hover:bg-chalk border-2 border-accent-orange hover:border-chalk text-center tracking-wider transition-colors"
-            >
-              Pogledaj cenovnik
-            </a>
-            <a
               href={PHONE_HREF}
               className="bg-transparent text-chalk font-tactical uppercase font-bold text-base md:text-lg px-8 py-5 hover:border-safety hover:text-safety border-2 border-scratched text-center tracking-wider transition-colors"
             >
               {PHONE}
+            </a>
+            <a
+              href="#cenovnik"
+              className="bg-accent-orange text-matte font-tactical uppercase font-bold text-base md:text-lg px-8 py-5 hover:bg-chalk border-2 border-accent-orange hover:border-chalk text-center tracking-wider transition-colors"
+            >
+              Pogledaj cenovnik
             </a>
           </div>
         </div>
       </header>
 
       {/* Services */}
-      <section id="usluge" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel/60">
+      <section id="usluge" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel">
         <div className="flex items-center gap-4 mb-4">
           <div className="size-2 bg-safety" />
           <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
@@ -180,7 +181,7 @@ const Index = () => {
       </section>
 
       {/* Why us */}
-      <section id="zasto" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel/60">
+      <section id="zasto" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel">
         <div className="flex items-center gap-4 mb-4">
           <div className="size-2 bg-safety" />
           <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
@@ -224,7 +225,7 @@ const Index = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-scratched border border-scratched mb-10">
           {[
-            { n: "01", title: "Rušenje zidova", price: "od 8 €", unit: "/m²" },
+            { n: "01", title: "Rušenje zidova", price: "od 12 €", unit: "/m²" },
             { n: "02", title: "Rušenje kupatila", price: "od 200 €", unit: "komplet" },
             { n: "03", title: "Komplet usluga", price: "od 200 €", unit: "rušenje + čišćenje" },
           ].map((p) => (
@@ -235,8 +236,8 @@ const Index = () => {
               <h3 className="font-tactical text-xl md:text-2xl uppercase font-bold text-chalk mb-4">
                 {p.title}
               </h3>
-              <div className="flex items-baseline gap-2">
-                <span className="font-tactical text-3xl md:text-4xl font-bold text-accent-orange">{p.price}</span>
+              <div className="flex items-baseline gap-2 flex-wrap">
+                <span className="font-tactical text-3xl md:text-4xl font-bold text-accent-orange whitespace-nowrap">{p.price}</span>
                 <span className="font-tactical text-xs text-chalk/60 uppercase tracking-wider">{p.unit}</span>
               </div>
             </article>
@@ -244,11 +245,11 @@ const Index = () => {
         </div>
 
         {/* Example */}
-        <div className="border-l-4 border-accent-orange bg-steel/60 p-6 md:p-8 mb-10">
+        <div className="border-l-4 border-accent-orange bg-steel p-6 md:p-8 mb-10">
           <div className="font-tactical text-accent-orange text-[10px] font-bold tracking-[0.3em] uppercase mb-3">
             Primer
           </div>
-          <p className="font-tactical text-lg md:text-2xl text-chalk uppercase font-bold leading-tight">
+          <p className="font-tactical text-lg md:text-2xl uppercase font-bold leading-tight text-safety">
             Rušenje kupatila 4–5m² sa iznošenjem šuta:{" "}
             <span className="text-accent-orange">250–400 €</span>
           </p>
@@ -279,7 +280,7 @@ const Index = () => {
       </section>
 
       {/* Gallery */}
-      <section id="galerija" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel/60">
+      <section id="galerija" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel">
         <div className="flex items-center gap-4 mb-4">
           <div className="size-2 bg-safety" />
           <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
@@ -342,7 +343,7 @@ const Index = () => {
       </section>
 
       {/* Reviews */}
-      <section id="recenzije" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel/60">
+      <section id="recenzije" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel">
         <div className="flex items-center gap-4 mb-4">
           <div className="size-2 bg-safety" />
           <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
@@ -461,7 +462,7 @@ const Index = () => {
           </form>
         </div>
       </section>
-      <footer className="px-4 md:px-12 py-10 flex flex-col md:flex-row gap-6 justify-between items-start md:items-center">
+      <footer className="px-4 md:px-12 py-10 pb-28 lg:pb-10 flex flex-col md:flex-row gap-6 justify-between items-start md:items-center">
         <div>
           <div className="font-tactical text-xl font-bold uppercase tracking-widest text-chalk">Apex Rušenje</div>
           <div className="font-tactical text-[10px] text-safety tracking-[0.3em] uppercase mt-1">
