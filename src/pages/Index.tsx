@@ -316,39 +316,8 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="kontakt" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched">
-        <div className="flex items-center gap-4 mb-4">
-          <div className="size-2 bg-safety" />
-          <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
-            Kontakt
-          </span>
-        </div>
-        <h2 className="font-tactical text-4xl md:text-6xl font-bold uppercase text-chalk leading-[0.9] mb-8">
-          Zovi. Izlazimo danas.
-        </h2>
-
-        <div className="space-y-6">
-          <a href={PHONE_HREF} className="flex items-baseline gap-4 group">
-            <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Telefon</span>
-            <span className="font-tactical text-2xl md:text-3xl text-chalk group-hover:text-safety">{PHONE}</span>
-          </a>
-          <a href="mailto:apexrusenje@gmail.com" className="flex items-baseline gap-4 group">
-            <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Email</span>
-            <span className="font-tactical text-lg md:text-xl text-chalk group-hover:text-safety">apexrusenje@gmail.com</span>
-          </a>
-          <div className="flex items-baseline gap-4">
-            <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Pokrivamo</span>
-            <span className="text-chalk/80">Ceo Beograd i okolina</span>
-          </div>
-        </div>
-
-        <p className="mt-10 pt-6 border-t border-scratched font-tactical text-sm md:text-base text-chalk/70 max-w-2xl">
-          Moguće slanje slika na WhatsApp i Viber za procenu i dobijanje ponude.
-        </p>
-      </section>
-
       {/* Reviews */}
-      <section id="recenzije" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel">
+      <section id="recenzije" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched">
         <div className="flex items-center gap-4 mb-4">
           <div className="size-2 bg-safety" />
           <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
@@ -466,6 +435,38 @@ const Index = () => {
             </button>
           </form>
         </div>
+      </section>
+
+      {/* Contact */}
+      <section id="kontakt" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel">
+        <div className="flex items-center gap-4 mb-4">
+          <div className="size-2 bg-safety" />
+          <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
+            Kontakt
+          </span>
+        </div>
+        <h2 className="font-tactical text-4xl md:text-6xl font-bold uppercase text-chalk leading-[0.9] mb-8">
+          Zovi. Izlazimo danas.
+        </h2>
+
+        <div className="space-y-6">
+          <a href={PHONE_HREF} className="flex items-baseline gap-4 group">
+            <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Telefon</span>
+            <span className="font-tactical text-2xl md:text-3xl text-chalk group-hover:text-safety">{PHONE}</span>
+          </a>
+          <a href="mailto:apexrusenje@gmail.com" className="flex items-baseline gap-4 group">
+            <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Email</span>
+            <span className="font-tactical text-lg md:text-xl text-chalk group-hover:text-safety">apexrusenje@gmail.com</span>
+          </a>
+          <div className="flex items-baseline gap-4">
+            <span className="font-tactical text-xs text-safety uppercase tracking-[0.2em] w-20">Pokrivamo</span>
+            <span className="text-chalk/80">Ceo Beograd i okolina</span>
+          </div>
+        </div>
+
+        <p className="mt-10 pt-6 border-t border-scratched font-tactical text-sm md:text-base text-chalk/70 max-w-2xl">
+          Moguće slanje slika na WhatsApp i Viber za procenu i dobijanje ponude.
+        </p>
       </section>
       <footer className="px-4 md:px-12 py-10 pb-28 lg:pb-10 flex flex-col md:flex-row gap-6 justify-between items-start md:items-center">
         <div>
