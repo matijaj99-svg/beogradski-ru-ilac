@@ -75,15 +75,20 @@ const Index = () => {
             Rušenje · Šut · Čišćenje
           </span>
         </a>
-        <div className="hidden lg:flex gap-10 font-tactical text-sm tracking-widest uppercase text-matte/80">
+        <div className="hidden lg:flex items-center gap-10 font-tactical text-sm tracking-widest uppercase text-matte/80">
           <a href="#usluge" className="hover:text-matte">Usluge</a>
           <a href="#proces" className="hover:text-matte">Proces</a>
           <a href="#zasto" className="hover:text-matte">Zašto nas</a>
           <a href="#cenovnik" className="hover:text-matte">Cenovnik</a>
           <a href="#galerija" className="hover:text-matte">Galerija</a>
           <a href="#recenzije" className="hover:text-matte">Recenzije</a>
-          <a href="#kontakt" className="hover:text-matte">Kontakt</a>
         </div>
+        <a
+          href="#kontakt"
+          className="hidden lg:inline-block ml-6 bg-matte text-chalk font-tactical uppercase font-bold text-xs px-4 py-2 border-2 border-matte hover:bg-transparent hover:text-matte tracking-widest transition-colors"
+        >
+          Kontakt
+        </a>
       </nav>
 
       {/* Hero */}
@@ -118,7 +123,7 @@ const Index = () => {
               href={PHONE_HREF}
               className="bg-transparent text-chalk font-tactical uppercase font-bold text-base md:text-lg px-8 py-5 hover:border-safety hover:text-safety border-2 border-scratched text-center tracking-wider transition-colors"
             >
-              {PHONE}
+              Pozovi odmah
             </a>
             <a
               href="#cenovnik"
