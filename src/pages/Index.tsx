@@ -115,16 +115,16 @@ const Index = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 max-w-3xl flex-wrap">
             <a
-              href="#cenovnik"
-              className="bg-accent-orange text-matte font-tactical uppercase font-bold text-base md:text-lg px-8 py-5 hover:bg-chalk border-2 border-accent-orange hover:border-chalk text-center tracking-wider transition-colors"
-            >
-              Pogledaj cenovnik
-            </a>
-            <a
               href={PHONE_HREF}
               className="bg-transparent text-chalk font-tactical uppercase font-bold text-base md:text-lg px-8 py-5 hover:border-safety hover:text-safety border-2 border-scratched text-center tracking-wider transition-colors"
             >
               {PHONE}
+            </a>
+            <a
+              href="#cenovnik"
+              className="bg-accent-orange text-matte font-tactical uppercase font-bold text-base md:text-lg px-8 py-5 hover:bg-chalk border-2 border-accent-orange hover:border-chalk text-center tracking-wider transition-colors"
+            >
+              Pogledaj cenovnik
             </a>
           </div>
         </div>
