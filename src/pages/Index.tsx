@@ -48,6 +48,7 @@ const Index = () => {
     { name: "Nikola Stanković", rating: 5, text: "Šut iznet isti dan, bez prašine po zgradi. Komšije zadovoljne, a to puno znači.", job: "Iznošenje šuta sa 5. sprata — Zvezdara" },
     { name: "Ana Milić", rating: 5, text: "Korektni od poziva do predaje ključeva. Fiksna cena, čist stan, fotografije po završetku.", job: "Rušenje stana 40m² — Banovo brdo" },
     { name: "Miloš Pavlović", rating: 4, text: "Solidno odrađeno, malo više prašine nego što sam očekivao ali su sve počistili pre odlaska. Cena korektna.", job: "Rušenje pregradnog zida — Mirijevo" },
+    { name: "Tijana Radović", rating: 5, text: "Izašli na procenu istog dana, ponuda fiksna i bez naknadnih troškova. Sve odradili brzo i ostavili stan spreman za majstore.", job: "Rušenje stana 60m² — Konjarnik" },
   ];
 
   const [reviews, setReviews] = useState(initialReviews);
