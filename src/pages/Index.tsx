@@ -12,7 +12,7 @@ import gallery9 from "@/assets/gallery-9.jpeg";
 import gallery10 from "@/assets/gallery-10.jpeg";
 
 const gallery = [
-  { src: gallery1, alt: "Šut i otpadni materijal pripremljen za iznošenje" },
+  { src: gallery1, alt: "Šut i otpadni materijal pripremljen za iznošenje " },
   { src: gallery2, alt: "Rušenje podova i pregradnih elemenata" },
   { src: gallery3, alt: "Kontejner sa drvenim otpadom" },
   { src: gallery4, alt: "Očišćen prostor spreman za predaju" },
