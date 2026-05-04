@@ -131,7 +131,7 @@ const Index = () => {
       </header>
 
       {/* Services */}
-      <section id="usluge" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel/60">
+      <section id="usluge" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel">
         <div className="flex items-center gap-4 mb-4">
           <div className="size-2 bg-safety" />
           <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
@@ -181,7 +181,7 @@ const Index = () => {
       </section>
 
       {/* Why us */}
-      <section id="zasto" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel/60">
+      <section id="zasto" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel">
         <div className="flex items-center gap-4 mb-4">
           <div className="size-2 bg-safety" />
           <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
@@ -245,7 +245,7 @@ const Index = () => {
         </div>
 
         {/* Example */}
-        <div className="border-l-4 border-accent-orange bg-steel/60 p-6 md:p-8 mb-10">
+        <div className="border-l-4 border-accent-orange bg-steel p-6 md:p-8 mb-10">
           <div className="font-tactical text-accent-orange text-[10px] font-bold tracking-[0.3em] uppercase mb-3">
             Primer
           </div>
@@ -280,7 +280,7 @@ const Index = () => {
       </section>
 
       {/* Gallery */}
-      <section id="galerija" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel/60">
+      <section id="galerija" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel">
         <div className="flex items-center gap-4 mb-4">
           <div className="size-2 bg-safety" />
           <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
@@ -343,7 +343,7 @@ const Index = () => {
       </section>
 
       {/* Reviews */}
-      <section id="recenzije" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel/60">
+      <section id="recenzije" className="px-4 md:px-12 py-20 md:py-24 border-b border-scratched bg-steel">
         <div className="flex items-center gap-4 mb-4">
           <div className="size-2 bg-safety" />
           <span className="text-safety font-tactical uppercase tracking-[0.2em] text-xs font-bold">
