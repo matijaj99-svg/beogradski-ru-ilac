@@ -249,7 +249,7 @@ const Index = () => {
           <div className="font-tactical text-accent-orange text-[10px] font-bold tracking-[0.3em] uppercase mb-3">
             Primer
           </div>
-          <p className="font-tactical text-lg md:text-2xl text-chalk uppercase font-bold leading-tight">
+          <p className="font-tactical text-lg md:text-2xl uppercase font-bold leading-tight text-safety">
             Rušenje kupatila 4–5m² sa iznošenjem šuta:{" "}
             <span className="text-accent-orange">250–400 €</span>
           </p>
