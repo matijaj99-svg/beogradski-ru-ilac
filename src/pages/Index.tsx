@@ -236,8 +236,8 @@ const Index = () => {
               <h3 className="font-tactical text-xl md:text-2xl uppercase font-bold text-chalk mb-4">
                 {p.title}
               </h3>
-              <div className="flex items-baseline gap-2">
-                <span className="font-tactical text-3xl md:text-4xl font-bold text-accent-orange">{p.price}</span>
+              <div className="flex items-baseline gap-2 flex-wrap">
+                <span className="font-tactical text-3xl md:text-4xl font-bold text-accent-orange whitespace-nowrap">{p.price}</span>
                 <span className="font-tactical text-xs text-chalk/60 uppercase tracking-wider">{p.unit}</span>
               </div>
             </article>
