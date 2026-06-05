@@ -54,8 +54,11 @@ const optimizeCriticalPath: Plugin = {
         .replace(/<script type="module"[^>]*><\/script>\s*/i, "");
 
       const hints = [
-        heroAssetPath &&
-          `<link rel="preload" as="image" href="${heroAssetPath}" fetchpriority="high" />`,
+          `<link rel="icon" href="/favicon.ico" sizes="any" />`,
+          `<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />`,
+          `<link rel="apple-touch-icon" sizes="64x64" href="/favicon-64x64.png" />`,
+        heroAssetPath && 
+          `<link rel="preload" as="image" href="${heroAssetPath}" fetchpriority="high" />`
         stylePreload,
         entryJsPath && `<link rel="modulepreload" crossorigin href="${entryJsPath}" />`,
         styleFallback,
